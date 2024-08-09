@@ -3,89 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business & Finance Book</title>
+    <title>Business & Finance Essentials</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Business & Finance Essentials</h1>
-        <nav>
-            <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#chapter1">Chapter 1: Understanding Business</a></li>
-                <li><a href="#chapter2">Chapter 2: Financial Basics</a></li>
-                <li><a href="#chapter3">Chapter 3: Investment Strategies</a></li>
-                <li><a href="#chapter4">Chapter 4: Risk Management</a></li>
-                <li><a href="#chapter5">Chapter 5: Business Growth</a></li>
-                <li><a href="#about">About the Author</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-left">
+            <img src="logo.png" alt="Company Logo" class="logo">
+            <h1>GitFocus</h1>
+        </div>
+        <div class="header-right">
+            <button id="theme-toggle">Toggle Theme</button>
+            <nav>
+                <ul>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#books">Books</a></li>
+                    <li><a href="#user">User</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
+    <aside class="sidebar">
+        <h2>Contents</h2>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#chapter1">Chapter 1: Understanding Business</a></li>
+            <li><a href="#chapter2">Chapter 2: Financial Basics</a></li>
+            <li><a href="#chapter3">Chapter 3: Investment Strategies</a></li>
+            <li><a href="#chapter4">Chapter 4: Risk Management</a></li>
+            <li><a href="#chapter5">Chapter 5: Business Growth</a></li>
+        </ul>
+    </aside>
 
     <main>
         <section id="introduction">
             <h2>Introduction</h2>
             <p>Welcome to the Business & Finance Essentials book. This book covers the fundamental aspects of running a successful business and managing finances effectively.</p>
+            <div class="navigation-buttons">
+                <button class="prev-page" disabled>Previous</button>
+                <button class="next-page">Next</button>
+            </div>
         </section>
 
-        <section id="chapter1">
+        <section id="chapter1" class="hidden">
             <h2>Chapter 1: Understanding Business</h2>
             <p>This chapter introduces the basics of business, including the different types of business models, market analysis, and the importance of strategic planning.</p>
-            <!-- Add more content here -->
+            <div class="navigation-buttons">
+                <button class="prev-page">Previous</button>
+                <button class="next-page">Next</button>
+            </div>
         </section>
 
-        <section id="chapter2">
-            <h2>Chapter 2: Financial Basics</h2>
-            <p>This chapter covers the essentials of finance, such as accounting principles, financial statements, and budgeting.</p>
-            <!-- Add more content here -->
-        </section>
+        <!-- Additional chapters here -->
 
-        <section id="chapter3">
-            <h2>Chapter 3: Investment Strategies</h2>
-            <p>Learn about various investment strategies, risk assessment, and portfolio management.</p>
-            <!-- Add more content here -->
-        </section>
-
-        <section id="chapter4">
-            <h2>Chapter 4: Risk Management</h2>
-            <p>Understand the importance of risk management and how to identify and mitigate business risks.</p>
-            <!-- Add more content here -->
-        </section>
-
-        <section id="chapter5">
+        <section id="chapter5" class="hidden">
             <h2>Chapter 5: Business Growth</h2>
             <p>This chapter discusses strategies for scaling your business, including marketing, expansion, and innovation.</p>
-            <!-- Add more content here -->
-        </section>
-
-        <section id="about">
-            <h2>About the Author</h2>
-            <p>A brief biography of the author, their expertise in business and finance, and their motivation for writing this book.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>If you have any questions or feedback, feel free to reach out via email or social media.</p>
-            <!-- You can add a contact form here -->
+            <div class="navigation-buttons">
+                <button class="prev-page">Previous</button>
+                <button class="next-page" disabled>Next</button>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Business & Finance Essentials. All rights reserved.</p>
-    </footer>
+    <div id="progress-bar"></div>
 
-    <script>
-        // Smooth scrolling to sections
-        document.querySelectorAll('nav ul li a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
